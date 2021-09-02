@@ -90,7 +90,7 @@ class PostsController extends Controller {
 
     public function delete(Request $request, $id) {
         Post::find($id)->delete();
-        return Redirect()->back();
+        return redirect()->route('allPosts');
     }
 
     
